@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock  %}
+{% block content %}
+<div class="container">
+    <h2 class="blue-text">Update Product</h2>
+    <hr/>
+    <div class="row">
+        <form class="col s12" action="{{url_for('update', id=product.id)}}" method="POST">
+         
+            <div class="input-field col s12">
+              <i class="material-icons prefix">code</i>
+              <input id="product_id" type='text' name="product_id" required value="{{product.product_id}}"></input>
+              <label for="product_id">Product Id</label>
+            </div>
+         
+
+          
+            <div class="input-field col s12">
+              <i class="material-icons prefix">shopping_cart</i>
+              <input id="product_name" type='text' name="product_name" required value="{{product.product_name}}"></input>
+              <label for="product_name">Product Name</label>
+           
+          </div>
+         
+            <div class="">
+          <label>Product Category</label>
+         
+          <select class="browser-default" name="category" >
+              <option value="{{product.category}}"
+                      >
+                      {{product.category}}</option>
+              <option value="Mobile Phone">
+                Mobile Phone</option>
+              <option value="Computer">
+                Computer</option>
+              <option value="Ipad">
+                Ipad</option>
+                <option value="Projector">
+                  Projector</option>
+                  <option value="IOT Device">
+                    IOT Device</option>
+          </select>
+      </div>
+      <script>
+        $(document).ready(function() {
+           $('select').material_select();
+        });
+     </script>
+    
+  </div>
+          
+            <div class="input-field col s12">
+              <i class="material-icons prefix">question_answer</i>
+              <input id="description" type='text' name="description" required value="{{product.description}}"></input>
+              <label for="description">Description</label>
+            </div>
+         
+
+          
+            <div class="input-field col s12">
+              <i class="material-icons prefix">invert_colors</i>
+              <input id="price" type='text' name="price" required value="{{product.price}}"></input>
+              <label for="price">Product Price</label>
+            </div>
+         
+          <button type="submit" class="waves-effect waves-light btn">Submit</button>
+        <br><br>
+        </form>
+       
+      </div>
+</div>
+
+{% endblock  %}

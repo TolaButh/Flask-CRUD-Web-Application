@@ -1,0 +1,123 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock  %}
+{% block content %}
+<div class="container">
+   
+    <div class="slider">
+        <ul class="slides">
+          <li>
+            <img class="" width="650" src="{{url_for('static', filename='image/banner1.jpg')}}"><!-- random image -->
+            <div class="caption center-align">
+              <h3 class="blue-text">The computer of IT Device</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our part of Device</h5>
+            </div>
+          </li>
+          <li>
+            <img class="" width="650" src="{{url_for('static', filename='image/banner2.png')}}"> <!-- random image -->
+            <div class="caption left-align">
+              <h3 class="blue-text">Good Monitor</h3>
+              <h5 class="light grey-text text-lighten-3"></h5>
+            </div>
+          </li>
+          <li>
+            <img class="" width="650" src="{{url_for('static', filename='image/banner03.jpg')}}"><!-- random image -->
+            <div class="caption right-align">
+              <h3>Christmas Promotion</h3>
+              <h5 class="light grey-text text-lighten-3">Our company discount for christmas day.</h5>
+            </div>
+          </li>
+          <li>
+            <img class="" width="650" src="{{url_for('static', filename='image/banner04.jpg')}}"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>Acer Day of IT Device</h3>
+              <h5 class="light grey-text text-lighten-3">It's so good.</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <script type="text/javascript">
+         $(document).ready(function(){
+          $('.slider').slider({full_width: true});
+        });
+    </script>
+
+    
+    
+      <div class="container">
+        <div class="section">
+    
+          <!--   Icon Section   -->
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">phone_iphone</i></h2>
+                <h5 class="center blue-text">Mobile Phone</h5>
+    
+                <p class="light teal-text">Mobile phones are efficient communication devices and make life easier. Whether locating a friend or following up with a new contact, mobile phones allow you to connect to people in any part of the world.</p>
+              </div>
+            </div>
+    
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">laptop_windows</i></h2>
+                <h5 class="center blue-text">Compuuter</h5>
+    
+                <p class="light teal-text">Computer has become very important nowadays because it is very much accurate, fast and can accomplish many tasks easily. Otherwise to complete those tasks manually much more time is required.</p>
+              </div>
+            </div>
+    
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">present_to_all</i></h2>
+                <h5 class="center blue-text">Projector</h5>
+    
+                <p class="light teal-text">Projectors help that communication by expanding the image of your computer screen to be large enough for a room full of people to see. When you're selecting a projector, you need to be certain it. </p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    
+    
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 center">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h4 class="blue-text">Privacy</h4>
+             <p class="left-align light">
+              We and our partners store and/or access information on a device, such as unique IDs in cookies to process personal data. You may accept or manage your choices by clicking below, including your right to object where legitimate interast 
+              is used, or at any time in the privacy policy page. Theas choices will be signaled to our partners and will not affect brosing data.
+
+             </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 center">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h4 class="blue-text">Contact Us</h4>
+              <p class="left-align light">Ubon Ratchathani Airport serves the Ubon Ratchathani province in the northeast region of 
+                Thailand, offering domestic flights to Bangkok. Our Ubon Ratchathani Airport guide provides airport contact details, information about the terminal, and nearby accommodationotions.
+              </p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    
+    
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row center">
+              <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="{{url_for('static', filename='/image/banner04.jpg')}}" alt="Unsplashed background img 3"></div>
+      </div>
+    
+
+</div>
+{% endblock  %}

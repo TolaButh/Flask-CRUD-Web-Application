@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %}{{title}}{% endblock  %}
+{% block content %}
+<div class="container">
+<h2 class="center blue-text">Product List</h2>
+<hr/>
+<table class="striped">
+    <thead class="blue-text">
+      <tr>
+          <th>Product Id</th>
+          <th>Product Name</th>
+          <th>Product Category</th>
+          <th>Product Description</th>
+          <th>Product Price</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      {% for product in product %}
+      <tr>
+          <th class="teal-text">{{product.product_id}}</th>
+          <th >{{product.product_name}}</th>
+          <th>{{product.category}}</th>
+          <th>{{product.description}}</th>
+          <th class="center red-text">{{product.price}}  baht</th>
+          <th>
+            <a href="{{url_for('update',id=product.id)}}" class="waves-effect waves-light btn-small light-green accent-4"><i class="material-icons ">create</i></a>    
+            <a href="{{url_for('delete',id=product.id)}}" class="waves-effect waves-light btn-small red darken-1"><i class="material-icons">delete</i></a>       
+          </th>
+      </tr>  
+      
+      {% endfor %}
+    </tbody>
+  </table>
+  <br>
+  <a href="{{url_for('add_product')}}" class="waves-effect waves-light btn light-green accent-4"><i class="material-icons left">add_circle_outline</i>Add Product</a>        
+  <br><br>
+
+</div>    
+
+{% endblock  %}
